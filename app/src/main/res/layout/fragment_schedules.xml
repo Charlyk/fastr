@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+                android:background="@android:color/white"
+             tools:context="com.softrangers.fastr.ui.SchedulesFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/todayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorAccent"
+            android:text="@string/today"
+            style="@style/Base.Widget.AppCompat.ActionButton"/>
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="@string/logout"
+            style="@style/Base.Widget.AppCompat.ActionButton"/>
+
+        <ImageView
+            android:id="@+id/toolbarLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/logoutButton"
+            android:layout_toEndOf="@id/logoutButton"
+            android:layout_toLeftOf="@id/todayButton"
+            android:layout_toStartOf="@id/todayButton"
+            android:src="@drawable/fastimage"
+            android:contentDescription="@null"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/toolbarSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/toolbar"
+        android:background="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/animatedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarSeparator"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        tools:text="animatedText"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+        android:padding="16dp"
+        android:gravity="center"/>
+
+    <View
+        android:id="@+id/animatedTextSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/animatedText"/>
+
+    <Button
+        android:id="@+id/pickDateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        style="@style/Base.Widget.AppCompat.ActionButton"
+        android:layout_below="@id/animatedTextSeparator"
+        android:background="?selectableItemBackground"/>
+
+    <View
+        android:id="@+id/pickDateButtonSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/pickDateButton"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/schedulesRexyclerView"
+        tools:listitem="@layout/schedule_item"
+        android:layout_below="@id/pickDateButtonSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

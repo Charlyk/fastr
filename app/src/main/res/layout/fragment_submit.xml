@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+                android:background="@android:color/white"
+             tools:context="com.softrangers.fastr.ui.SubmitFragment">
+
+    <RelativeLayout
+        android:id="@+id/submitToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageButton
+            android:id="@+id/submitBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/Base.Widget.AppCompat.ActionButton"
+            android:background="?selectableItemBackground"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/btn_back"
+            android:contentDescription="@string/go_to_previous_screen"/>
+
+        <ImageView
+            android:id="@+id/submitToolbarLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/fastimage"
+            android:contentDescription="@string/app_name"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/submitToolbarSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/submitToolBar"/>
+
+    <TextView
+        android:id="@+id/submitLargeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submitToolbarSeparator"
+        android:text="@string/large"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/submitLargeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/submitLargeTitle"
+        android:layout_toEndOf="@id/submitLargeTitle"
+        android:layout_alignBottom="@id/submitLargeTitle"
+        tools:text="1"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/submitSmallTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/submitLargeTitle"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/small"/>
+
+    <TextView
+        android:id="@+id/submitSmallLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/submitSmallTitle"
+        android:layout_toEndOf="@id/submitSmallTitle"
+        android:layout_alignBottom="@id/submitSmallTitle"
+        tools:text="0"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/submitRewardInfoLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/submitLargeTitle"
+        android:textColor="@color/colorAccent"
+        android:text="@string/the_total_reward"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"
+        android:focusable="true"
+        android:layout_marginBottom="5dp"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/submitRewardInfoLabel"
+        android:background="@color/colorAccent"/>
+</RelativeLayout>

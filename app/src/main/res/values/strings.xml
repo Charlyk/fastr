@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FastS</string>
+    <string name="logout">Logout</string>
+    <string name="today">Today</string>
+    <string name="email_address">Email address</string>
+    <string name="pin">Pin</string>
+    <string name="login">Login</string>
+    <string name="provide_data">Please enter all your credetials correctly.</string>
+    <string name="mapit">MapIt</string>
+    <string name="select_status">Select status</string>
+    <string name="cancel">Cancel</string>
+    <string name="cant_change_status">Can\'t change status</string>
+    <string name="welcome">Welcome! You have %1$s appointments for today %2$s</string>
+    <string name="go_to_previous_screen">Go to previous screen</string>
+    <string name="large">Large:</string>
+    <string name="small">Small:</string>
+    <string name="the_total_reward">The total reward ammount can NOT exceed $130.00 dollars</string>
+</resources>

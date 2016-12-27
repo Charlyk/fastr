@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file:///Users/owner/StudioProjects/FastR/FastR.iml" filepath="/Users/owner/StudioProjects/FastR/FastR.iml" />
-      <module fileurl="file:///Users/owner/StudioProjects/FastR/app/app.iml" filepath="/Users/owner/StudioProjects/FastR/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fastr.iml" filepath="$PROJECT_DIR$/fastr.iml" />
     </modules>
   </component>
 </project>

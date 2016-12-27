@@ -15,4 +15,19 @@
     <string name="large">Large:</string>
     <string name="small">Small:</string>
     <string name="the_total_reward">The total reward ammount can NOT exceed $130.00 dollars</string>
+    <string name="submit">Submit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="product_description">Product description:</string>
+    <string name="reject_reason">Reject reason:</string>
+    <string name="scan_barcode">Scan barcode</string>
+    <string name="or_enter_invoice_id">or enter invoice id</string>
+    <string name="configuration">Configuration</string>
+    <string name="appliance_upload_photo">Appliance (Upload photo)</string>
+    <string name="brand">Brand</string>
+    <string name="unit_age">Unit age</string>
+    <string name="unit_size">Unit size</string>
+    <string name="damage">Damage?</string>
+    <string name="add_fields">Add fields</string>
 </resources>

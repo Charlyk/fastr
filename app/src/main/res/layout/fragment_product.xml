@@ -1,0 +1,280 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.softrangers.fastr.ui.ProductFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Product description -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/product_description"/>
+
+            <Button
+                android:id="@+id/productDescriptionBtn"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="start|center_vertical"
+                tools:text="Refrigerator"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                style="@style/Base.Widget.AppCompat.ActionButton"
+                android:background="@drawable/selector_bg"/>
+        </LinearLayout>
+
+        <!-- Choose reason -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reject_reason"/>
+
+            <Button
+                android:id="@+id/rejectReasonBtn"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="start|center_vertical"
+                tools:text="Choose reason"
+                android:textColor="@android:color/darker_gray"
+                android:layout_weight="1"
+                style="@style/Base.Widget.AppCompat.ActionButton"/>
+        </LinearLayout>
+
+        <!-- Scan barcode btn -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/scanBarcodeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/scan_barcode"
+                android:background="@drawable/round_corner_btn_accent"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                style="@style/Base.Widget.AppCompat.ActionButton"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:text="@string/or_enter_invoice_id"/>
+        </LinearLayout>
+
+        <!-- Invoice id field -->
+        <EditText
+            android:id="@+id/invoiceIdInput"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/selector_bg"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Product description -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/configuration"/>
+
+            <Button
+                android:id="@+id/configurationButton"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="start|center_vertical"
+                tools:text="Refrigerator"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                style="@style/Base.Widget.AppCompat.ActionButton"
+                android:background="@drawable/selector_bg"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appliance_upload_photo"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Product image -->
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/image_frame"/>
+
+        <!-- Brand -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand"/>
+
+            <EditText
+                android:id="@+id/productBrandInput"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="start|center_vertical"
+                android:textSize="14sp"
+                tools:text="Refrigerator"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:background="@drawable/selector_bg"/>
+        </LinearLayout>
+
+        <!-- Unit size -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unit_size"/>
+
+            <EditText
+                android:id="@+id/unitSizeInput"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="14sp"
+                android:gravity="start|center_vertical"
+                tools:text="Refrigerator"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:background="@drawable/selector_bg"/>
+        </LinearLayout>
+
+        <!-- Unit age -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unit_age"/>
+
+            <EditText
+                android:id="@+id/unitAgeInput"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="start|center_vertical"
+                android:textSize="14sp"
+                tools:text="Refrigerator"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:background="@drawable/selector_bg"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/damageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/damage"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/damageSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/damageTitle"
+                android:layout_toEndOf="@id/damageTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <Button
+                android:id="@+id/addFieldsBtn"
+                style="@style/Base.Widget.AppCompat.ActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/white"
+                android:background="@drawable/round_corner_btn_accent"
+                android:text="@string/add_fields"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

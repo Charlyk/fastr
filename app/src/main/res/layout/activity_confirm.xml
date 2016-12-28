@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_confirm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.softrangers.fastr.ui.ConfirmActivity">
+
+    <RelativeLayout
+        android:id="@+id/submitToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageButton
+            android:id="@+id/submitBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/Base.Widget.AppCompat.ActionButton"
+            android:background="?selectableItemBackground"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/btn_back"
+            android:contentDescription="@string/go_to_previous_screen"/>
+
+        <ImageView
+            android:id="@+id/submitToolbarLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/fastimage"
+            android:contentDescription="@string/app_name"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/toolbarSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/submitToolBar"
+        android:background="@color/colorAccent"/>
+</RelativeLayout>

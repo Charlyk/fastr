@@ -1,6 +1,7 @@
 package com.softrangers.fastr.ui;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.SwitchCompat;
@@ -13,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.softrangers.fastr.R;
+import com.softrangers.fastr.util.BarcodeScanner;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,7 +26,9 @@ import butterknife.Unbinder;
  */
 public class ProductFragment extends Fragment implements CompoundButton.OnCheckedChangeListener {
 
+    private static final int SCAN_RC = 1727;
     private Unbinder mUnbinder;
+    private SubmitActivity mActivity;
 
     @BindView(R.id.productDescriptionBtn) Button mDescriptionBtn;
     @BindView(R.id.rejectReasonBtn) Button mRejectReasonBtn;
@@ -69,7 +73,8 @@ public class ProductFragment extends Fragment implements CompoundButton.OnChecke
 
     @OnClick(R.id.scanBarcodeBtn)
     void scanBarcode() {
-
+        Intent intent = new Intent(mActivity, BarcodeScanner.class);
+        startActivityForResult(intent, SCAN_RC);
     }
 
     @OnClick(R.id.productImageView)
@@ -91,6 +96,18 @@ public class ProductFragment extends Fragment implements CompoundButton.OnChecke
     public void onDestroyView() {
         super.onDestroyView();
         mUnbinder.unbind();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == SubmitActivity.RESULT_OK) {
+            switch (requestCode) {
+                case SCAN_RC:
+                    String barcode = data.getExtras().getString("code");
+                    mInvoiceIdInput.setText(barcode);
+                    break;
+            }
+        }
     }
 
     @Override
